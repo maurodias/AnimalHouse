@@ -1,0 +1,31 @@
+<h1>Listing animals</h1>
+
+<table>
+  <tr>
+    <th>Nome</th>
+    <th>Nomepopular</th>
+    <th>Status</th>
+    <th>Dtmodificacao</th>
+    <th>Veterinario</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @animals.each do |animal| %>
+  <tr>
+    <td><%= animal.nome %></td>
+    <td><%= animal.nomePopular %></td>
+    <td><%= animal.status %></td>
+    <td><%= animal.dtModificacao %></td>
+    <td><%= animal.veterinario %></td>
+    <td><%= link_to 'Show', animal %></td>
+    <td><%= link_to 'Edit', edit_animal_path(animal) %></td>
+    <td><%= link_to 'Destroy', animal, confirm: 'Are you sure?', method: :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Animal', new_animal_path %>
