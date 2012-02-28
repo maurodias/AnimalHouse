@@ -4,7 +4,7 @@
   = f.input :telefone, :label => 'telefone'
   = f.input :email, :label => 'email'
   = f.input :endereco, :label => 'endereco'
-  = f.input :CEP, :label => 'CEP'
+  = f.input :cep, :label => 'cep'
   = f.input :nota, :label => 'nota'
   = f.input :nome, :label => 'nome'
   = f.input :login, :label => 'login'

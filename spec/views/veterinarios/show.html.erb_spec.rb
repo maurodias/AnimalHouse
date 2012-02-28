@@ -5,16 +5,19 @@ describe "veterinarios/show" do
     @veterinario = assign(:veterinario, stub_model(Veterinario,
       :crmv => "Crmv",
       :status => "Status",
-      :telefone => "Telefone",
+      :nome => "Nome",
       :email => "Email",
       :telefone => "Telefone",
       :endereco => "Endereco",
-      :cep => "Cep",
+      :CEP => "Cep",
       :nota => "Nota",
-      :dtModificacao => "Dtmodificacao",
+      :imageURL => "Imageurl",
+      :detalhes => "Detalhes",
+      :admin => "Admin",
       :login => "Login",
       :pass => "Pass",
-      :fotoperfil => "Fotoperfil"
+      :cidade => "Cidade",
+      :estado => "Estado"
     ))
   end
 
@@ -25,7 +28,7 @@ describe "veterinarios/show" do
     # Run the generator again with the --webrat flag if you want to use webrat matchers
     rendered.should match(/Status/)
     # Run the generator again with the --webrat flag if you want to use webrat matchers
-    rendered.should match(/Telefone/)
+    rendered.should match(/Nome/)
     # Run the generator again with the --webrat flag if you want to use webrat matchers
     rendered.should match(/Email/)
     # Run the generator again with the --webrat flag if you want to use webrat matchers
@@ -37,12 +40,18 @@ describe "veterinarios/show" do
     # Run the generator again with the --webrat flag if you want to use webrat matchers
     rendered.should match(/Nota/)
     # Run the generator again with the --webrat flag if you want to use webrat matchers
-    rendered.should match(/Dtmodificacao/)
+    rendered.should match(/Imageurl/)
+    # Run the generator again with the --webrat flag if you want to use webrat matchers
+    rendered.should match(/Detalhes/)
+    # Run the generator again with the --webrat flag if you want to use webrat matchers
+    rendered.should match(/Admin/)
     # Run the generator again with the --webrat flag if you want to use webrat matchers
     rendered.should match(/Login/)
     # Run the generator again with the --webrat flag if you want to use webrat matchers
     rendered.should match(/Pass/)
     # Run the generator again with the --webrat flag if you want to use webrat matchers
-    rendered.should match(/Fotoperfil/)
+    rendered.should match(/Cidade/)
+    # Run the generator again with the --webrat flag if you want to use webrat matchers
+    rendered.should match(/Estado/)
   end
 end

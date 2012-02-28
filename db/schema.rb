@@ -11,32 +11,33 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120214133812) do
+ActiveRecord::Schema.define(:version => 20120228143455) do
 
-  create_table "animals", :force => true do |t|
-    t.string   "nome"
-    t.string   "nomePopular"
-    t.string   "status"
-    t.string   "dtModificacao"
+  create_table "items", :force => true do |t|
+    t.string   "satus"
     t.integer  "veterinario_id"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
 
-  add_index "animals", ["veterinario_id"], :name => "index_animals_on_veterinario_id"
+  add_index "items", ["veterinario_id"], :name => "index_items_on_veterinario_id"
 
   create_table "veterinarios", :force => true do |t|
     t.string   "crmv"
     t.string   "status"
-    t.string   "telefone"
+    t.string   "nome"
     t.string   "email"
+    t.string   "telefone"
     t.string   "endereco"
-    t.string   "cep"
+    t.string   "CEP"
     t.string   "nota"
-    t.string   "dtModificacao"
+    t.string   "imageURL"
+    t.string   "detalhes"
+    t.string   "admin"
     t.string   "login"
     t.string   "pass"
-    t.string   "fotoperfil"
+    t.string   "cidade"
+    t.string   "estado"
     t.datetime "created_at"
     t.datetime "updated_at"
   end

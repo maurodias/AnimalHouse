@@ -4,15 +4,18 @@ FactoryGirl.define do
   factory :veterinario do
     crmv "MyString"
     status "MyString"
-    telefone "MyString"
+    nome "MyString"
     email "MyString"
     telefone "MyString"
     endereco "MyString"
-    cep "MyString"
+    CEP "MyString"
     nota "MyString"
-    dtModificacao "MyString"
+    imageURL "MyString"
+    detalhes "MyString"
+    admin "MyString"
     login "MyString"
     pass "MyString"
-    fotoperfil "MyString"
+    cidade "MyString"
+    estado "MyString"
   end
 end

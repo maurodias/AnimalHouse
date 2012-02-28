@@ -6,30 +6,36 @@ describe "veterinarios/index" do
       stub_model(Veterinario,
         :crmv => "Crmv",
         :status => "Status",
-        :telefone => "Telefone",
+        :nome => "Nome",
         :email => "Email",
         :telefone => "Telefone",
         :endereco => "Endereco",
-        :cep => "Cep",
+        :CEP => "Cep",
         :nota => "Nota",
-        :dtModificacao => "Dtmodificacao",
+        :imageURL => "Imageurl",
+        :detalhes => "Detalhes",
+        :admin => "Admin",
         :login => "Login",
         :pass => "Pass",
-        :fotoperfil => "Fotoperfil"
+        :cidade => "Cidade",
+        :estado => "Estado"
       ),
       stub_model(Veterinario,
         :crmv => "Crmv",
         :status => "Status",
-        :telefone => "Telefone",
+        :nome => "Nome",
         :email => "Email",
         :telefone => "Telefone",
         :endereco => "Endereco",
-        :cep => "Cep",
+        :CEP => "Cep",
         :nota => "Nota",
-        :dtModificacao => "Dtmodificacao",
+        :imageURL => "Imageurl",
+        :detalhes => "Detalhes",
+        :admin => "Admin",
         :login => "Login",
         :pass => "Pass",
-        :fotoperfil => "Fotoperfil"
+        :cidade => "Cidade",
+        :estado => "Estado"
       )
     ])
   end
@@ -41,7 +47,7 @@ describe "veterinarios/index" do
     # Run the generator again with the --webrat flag if you want to use webrat matchers
     assert_select "tr>td", :text => "Status".to_s, :count => 2
     # Run the generator again with the --webrat flag if you want to use webrat matchers
-    assert_select "tr>td", :text => "Telefone".to_s, :count => 2
+    assert_select "tr>td", :text => "Nome".to_s, :count => 2
     # Run the generator again with the --webrat flag if you want to use webrat matchers
     assert_select "tr>td", :text => "Email".to_s, :count => 2
     # Run the generator again with the --webrat flag if you want to use webrat matchers
@@ -53,12 +59,18 @@ describe "veterinarios/index" do
     # Run the generator again with the --webrat flag if you want to use webrat matchers
     assert_select "tr>td", :text => "Nota".to_s, :count => 2
     # Run the generator again with the --webrat flag if you want to use webrat matchers
-    assert_select "tr>td", :text => "Dtmodificacao".to_s, :count => 2
+    assert_select "tr>td", :text => "Imageurl".to_s, :count => 2
+    # Run the generator again with the --webrat flag if you want to use webrat matchers
+    assert_select "tr>td", :text => "Detalhes".to_s, :count => 2
+    # Run the generator again with the --webrat flag if you want to use webrat matchers
+    assert_select "tr>td", :text => "Admin".to_s, :count => 2
     # Run the generator again with the --webrat flag if you want to use webrat matchers
     assert_select "tr>td", :text => "Login".to_s, :count => 2
     # Run the generator again with the --webrat flag if you want to use webrat matchers
     assert_select "tr>td", :text => "Pass".to_s, :count => 2
     # Run the generator again with the --webrat flag if you want to use webrat matchers
-    assert_select "tr>td", :text => "Fotoperfil".to_s, :count => 2
+    assert_select "tr>td", :text => "Cidade".to_s, :count => 2
+    # Run the generator again with the --webrat flag if you want to use webrat matchers
+    assert_select "tr>td", :text => "Estado".to_s, :count => 2
   end
 end
