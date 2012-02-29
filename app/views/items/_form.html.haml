@@ -1,0 +1,5 @@
+= semantic_form_for(@item) do |f| 
+  = f.input :satus, :label => 'Status'
+  = f.input :veterinario, :member_label => :nome, :label => 'Veterinario'
+  = f.submit 'Salvar'
+

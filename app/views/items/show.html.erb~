@@ -1,7 +1,7 @@
 <p id="notice"><%= notice %></p>
 
 <p>
-  <b>Status:</b>
+  <b>Satus:</b>
   <%= @item.satus %>
 </p>
 
