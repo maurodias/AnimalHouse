@@ -1,4 +1,6 @@
 AnimalHouse::Application.routes.draw do
+  resources :edicaos
+
   resources :veterinarios
 
   resources :items

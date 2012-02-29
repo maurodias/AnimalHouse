@@ -6,7 +6,7 @@ feature 'gerenciar item' do
   
   scenario 'incluir item' do
 
-    especialidade = FactoryGirl.create(:veterinario,:nome=> 'JOSHUA')   
+    veterinario = FactoryGirl.create(:veterinario,:nome=> 'JOSHUA')   
     visit new_item_path
     
     fill_in 'Status', :with => 'Aceito'
@@ -34,18 +34,12 @@ feature 'gerenciar item' do
 
   end
  scenario 'excluir item' do
+    veterinario = FactoryGirl.create(:veterinario,:nome=> 'JOSHUA')   
+    item = FactoryGirl.create(:item, :veterinario => veterinario)  
+    visit items_path
 
-    especialidade = FactoryGirl.create(:veterinario,:nome=> 'JOSHUA')   
-    visit new_item_path
+    click_link 'Excluir'  
     
-    fill_in 'Status', :with => 'Aceito'
-    select 'JOSHUA', :on => 'Veterinario'
-        
-    click_button 'Salvar'
-   
-    page.should have_content 'Status: Aceito'
-    page.should have_content 'Veterinario: JOSHUA'
-
   end
  
 end

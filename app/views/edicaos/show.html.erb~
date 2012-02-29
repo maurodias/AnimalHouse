@@ -1,0 +1,25 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Status:</b>
+  <%= @edicao.status %>
+</p>
+
+<p>
+  <b>Camposeditado:</b>
+  <%= @edicao.camposEditado %>
+</p>
+
+<p>
+  <b>Veterinario:</b>
+  <%= @edicao.veterinario %>
+</p>
+
+<p>
+  <b>Item:</b>
+  <%= @edicao.item %>
+</p>
+
+
+<%= link_to 'Edit', edit_edicao_path(@edicao) %> |
+<%= link_to 'Back', edicaos_path %>

@@ -1,0 +1,29 @@
+<h1>Listing edicaos</h1>
+
+<table>
+  <tr>
+    <th>Status</th>
+    <th>Camposeditado</th>
+    <th>Veterinario</th>
+    <th>Item</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @edicaos.each do |edicao| %>
+  <tr>
+    <td><%= edicao.status %></td>
+    <td><%= edicao.camposEditado %></td>
+    <td><%= edicao.veterinario %></td>
+    <td><%= edicao.item %></td>
+    <td><%= link_to 'Show', edicao %></td>
+    <td><%= link_to 'Edit', edit_edicao_path(edicao) %></td>
+    <td><%= link_to 'Destroy', edicao, confirm: 'Are you sure?', method: :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Edicao', new_edicao_path %>
