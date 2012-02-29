@@ -45,9 +45,8 @@ click_button 'Salvar'
  end
 
 scenario 'Alterar veterinario' do
-    visit new_veterinario_path
-
-
+    veterinario = FactoryGirl.create(:veterinario)
+    visit edit_veterinario_path(veterinario)
 fill_in "crmv", :with => '31231213'
 fill_in "status", :with => 'inativo'
 fill_in "telefone", :with =>'221221221'

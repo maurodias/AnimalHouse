@@ -19,6 +19,34 @@ feature 'gerenciar item' do
 
   end
 
+ scenario 'alterar item' do
+        veterinario = FactoryGirl.create(:veterinario,:nome=> 'JOSHUaA')   
+	item = FactoryGirl.create(:item, :veterinario => veterinario)    
+  	visit edit_item_path(item)
+    
+    fill_in 'Status', :with => 'Aceito'
+    select 'JOSHUaA', :on => 'Veterinario'
+        
+    click_button 'Salvar'
+   
+    page.should have_content 'Status: Aceito'
+    page.should have_content 'Veterinario: JOSHUaA'
+
+  end
+ scenario 'excluir item' do
+
+    especialidade = FactoryGirl.create(:veterinario,:nome=> 'JOSHUA')   
+    visit new_item_path
+    
+    fill_in 'Status', :with => 'Aceito'
+    select 'JOSHUA', :on => 'Veterinario'
+        
+    click_button 'Salvar'
+   
+    page.should have_content 'Status: Aceito'
+    page.should have_content 'Veterinario: JOSHUA'
+
+  end
  
 end
 
