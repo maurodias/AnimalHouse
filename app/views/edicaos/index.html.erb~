@@ -15,11 +15,11 @@
   <tr>
     <td><%= edicao.status %></td>
     <td><%= edicao.camposEditado %></td>
-    <td><%= edicao.veterinario %></td>
-    <td><%= edicao.item %></td>
+    <td><%= edicao.veterinario.nome %></td>
+    <td><%= edicao.item.id %></td>
     <td><%= link_to 'Show', edicao %></td>
     <td><%= link_to 'Edit', edit_edicao_path(edicao) %></td>
-    <td><%= link_to 'Destroy', edicao, confirm: 'Are you sure?', method: :delete %></td>
+    <td><%= link_to 'Excluir', edicao, confirm: 'Are you sure?', method: :delete %></td>
   </tr>
 <% end %>
 </table>
