@@ -17,7 +17,7 @@
 
 <p>
   <b>Item:</b>
-  <%= @animal.item.id %>
+  <%= @animal.item %>
 </p>
 
 

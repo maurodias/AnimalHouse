@@ -16,7 +16,7 @@
     <td><%= animal.nomeCientifico %></td>
     <td><%= animal.nomePopular %></td>
     <td><%= animal.detalhes %></td>
-    <td><%= animal.item.id %></td>
+    <td><%= animal.item %></td>
     <td><%= link_to 'Show', animal %></td>
     <td><%= link_to 'Edit', edit_animal_path(animal) %></td>
     <td><%= link_to 'Excluir', animal, confirm: 'Are you sure?', method: :delete %></td>

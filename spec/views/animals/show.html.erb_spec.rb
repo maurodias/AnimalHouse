@@ -3,24 +3,21 @@ require 'spec_helper'
 describe "animals/show" do
   before(:each) do
     @animal = assign(:animal, stub_model(Animal,
-      :nome => "Nome",
+      :nomeCientifico => "Nomecientifico",
       :nomePopular => "Nomepopular",
-      :status => "Status",
-      :dtModificacao => "Dtmodificacao",
-      :veterinario => nil
+      :detalhes => "Detalhes",
+      :item => nil
     ))
   end
 
   it "renders attributes in <p>" do
     render
     # Run the generator again with the --webrat flag if you want to use webrat matchers
-    rendered.should match(/Nome/)
+    rendered.should match(/Nomecientifico/)
     # Run the generator again with the --webrat flag if you want to use webrat matchers
     rendered.should match(/Nomepopular/)
     # Run the generator again with the --webrat flag if you want to use webrat matchers
-    rendered.should match(/Status/)
-    # Run the generator again with the --webrat flag if you want to use webrat matchers
-    rendered.should match(/Dtmodificacao/)
+    rendered.should match(/Detalhes/)
     # Run the generator again with the --webrat flag if you want to use webrat matchers
     rendered.should match(//)
   end

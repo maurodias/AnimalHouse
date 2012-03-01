@@ -2,10 +2,9 @@
 
 FactoryGirl.define do
   factory :animal do
-    nome "MyString"
+    nomeCientifico "MyString"
     nomePopular "MyString"
-    status "MyString"
-    dtModificacao "MyString"
-    veterinario nil
+    detalhes "MyString"
+    item nil
   end
 end

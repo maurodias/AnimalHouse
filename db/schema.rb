@@ -11,7 +11,18 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120229150648) do
+ActiveRecord::Schema.define(:version => 20120301031432) do
+
+  create_table "animals", :force => true do |t|
+    t.string   "nomeCientifico"
+    t.string   "nomePopular"
+    t.string   "detalhes"
+    t.integer  "item_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "animals", ["item_id"], :name => "index_animals_on_item_id"
 
   create_table "edicaos", :force => true do |t|
     t.string   "status"
