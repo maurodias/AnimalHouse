@@ -1,4 +1,6 @@
 AnimalHouse::Application.routes.draw do
+  resources :sintomas
+
   resources :racas
 
   resources :animals

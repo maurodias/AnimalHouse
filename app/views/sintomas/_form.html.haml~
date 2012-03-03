@@ -1,0 +1,29 @@
+<%= form_for(@sintoma) do |f| %>
+  <% if @sintoma.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@sintoma.errors.count, "error") %> prohibited this sintoma from being saved:</h2>
+
+      <ul>
+      <% @sintoma.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :nome %><br />
+    <%= f.text_field :nome %>
+  </div>
+  <div class="field">
+    <%= f.label :detalhes %><br />
+    <%= f.text_field :detalhes %>
+  </div>
+  <div class="field">
+    <%= f.label :item %><br />
+    <%= f.text_field :item %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

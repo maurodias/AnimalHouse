@@ -26,7 +26,7 @@ feature 'gerenciar animal' do
  scenario 'alterar animal' do
         item = FactoryGirl.create(:item,:id => '1')    
         animal = FactoryGirl.create(:animal,:item => item) 
-        visit edit_animal_path(item)
+        visit edit_animal_path(animal)
     
     fill_in 'Nome Cientifico', :with => 'Canis lupus familiaris'
     fill_in 'Nome Popular', :with => 'Cachorro'
