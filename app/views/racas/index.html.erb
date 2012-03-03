@@ -1,0 +1,31 @@
+<h1>Listing racas</h1>
+
+<table>
+  <tr>
+    <th>Animal</th>
+    <th>Origem</th>
+    <th>Nome</th>
+    <th>Detalhes</th>
+    <th>Item</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @racas.each do |raca| %>
+  <tr>
+    <td><%= raca.animal.nomePopular %></td>
+    <td><%= raca.origem %></td>
+    <td><%= raca.nome %></td>
+    <td><%= raca.detalhes %></td>
+    <td><%= raca.item.id %></td>
+    <td><%= link_to 'Show', raca %></td>
+    <td><%= link_to 'Edit', edit_raca_path(raca) %></td>
+    <td><%= link_to 'Excluir', raca, confirm: 'Are you sure?', method: :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Raca', new_raca_path %>

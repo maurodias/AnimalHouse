@@ -1,0 +1,30 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Animal:</b>
+  <%= @raca.animal.nomePopular %>
+</p>
+
+<p>
+  <b>Origem:</b>
+  <%= @raca.origem %>
+</p>
+
+<p>
+  <b>Nome:</b>
+  <%= @raca.nome %>
+</p>
+
+<p>
+  <b>Detalhes:</b>
+  <%= @raca.detalhes %>
+</p>
+
+<p>
+  <b>Item:</b>
+  <%= @raca.item.id %>
+</p>
+
+
+<%= link_to 'Edit', edit_raca_path(@raca) %> |
+<%= link_to 'Back', racas_path %>

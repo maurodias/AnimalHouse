@@ -1,4 +1,6 @@
 AnimalHouse::Application.routes.draw do
+  resources :racas
+
   resources :animals
 
   resources :edicaos
