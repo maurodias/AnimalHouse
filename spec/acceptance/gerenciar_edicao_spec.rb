@@ -28,7 +28,7 @@ feature 'gerenciar edicao' do
         item = FactoryGirl.create(:item,:id => '1')    
         veterinario = FactoryGirl.create(:veterinario,:nome=> 'JOSHUaA')
         edicao = FactoryGirl.create(:edicao, :veterinario => veterinario,:item => item)      
-        visit edit_edicao_path(item)
+        visit edit_edicao_path(edicao)
     
     fill_in 'CampoEditado', :with => 'nome'
     fill_in 'Status', :with => 'Aceito'

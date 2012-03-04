@@ -1,4 +1,6 @@
 AnimalHouse::Application.routes.draw do
+  resources :especialidades
+
   resources :tratamentos
 
   resources :sintomas

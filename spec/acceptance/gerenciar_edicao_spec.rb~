@@ -39,7 +39,7 @@ feature 'gerenciar edicao' do
    
     page.should have_content 'Status: Aceito'
     page.should have_content 'CampoEditado: nome'
-    page.should have_content 'Veterinario: JOSHUA'
+    page.should have_content 'Veterinario: JOSHUaA'
     page.should have_content 'Item: 1'
   end
 
