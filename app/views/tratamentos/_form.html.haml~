@@ -1,0 +1,29 @@
+<%= form_for(@tratamento) do |f| %>
+  <% if @tratamento.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@tratamento.errors.count, "error") %> prohibited this tratamento from being saved:</h2>
+
+      <ul>
+      <% @tratamento.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :nome %><br />
+    <%= f.text_field :nome %>
+  </div>
+  <div class="field">
+    <%= f.label :detalhes %><br />
+    <%= f.text_field :detalhes %>
+  </div>
+  <div class="field">
+    <%= f.label :item %><br />
+    <%= f.text_field :item %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

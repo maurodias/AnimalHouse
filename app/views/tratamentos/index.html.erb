@@ -1,0 +1,27 @@
+<h1>Listing tratamentos</h1>
+
+<table>
+  <tr>
+    <th>Nome</th>
+    <th>Detalhes</th>
+    <th>Item</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @tratamentos.each do |tratamento| %>
+  <tr>
+    <td><%= tratamento.nome %></td>
+    <td><%= tratamento.detalhes %></td>
+    <td><%= tratamento.item.id %></td>
+    <td><%= link_to 'Show', tratamento %></td>
+    <td><%= link_to 'Edit', edit_tratamento_path(tratamento) %></td>
+    <td><%= link_to 'Excluir', tratamento, confirm: 'Are you sure?', method: :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Tratamento', new_tratamento_path %>

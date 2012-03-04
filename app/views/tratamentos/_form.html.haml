@@ -1,0 +1,6 @@
+= semantic_form_for(@tratamento) do |f| 
+  = f.input :nome, :label => 'Nome'
+  = f.input :detalhes, :label => 'Detalhes'
+  = f.input :item, :member_label => :id, :label => 'Item'
+  = f.submit 'Salvar'
+
