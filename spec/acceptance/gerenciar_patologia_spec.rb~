@@ -8,7 +8,7 @@ feature 'gerenciar patologia' do
 
     item = FactoryGirl.create(:item,:id => '1')   
     especialidade = FactoryGirl.create(:especialidade,:nome=> 'Cardio')
-    visit new_patologia_path
+    visit new_patologium_path
   
     fill_in 'Nome', :with => 'Influenza'
     fill_in 'NomePopular', :with => 'Gripe'
@@ -19,7 +19,7 @@ feature 'gerenciar patologia' do
    
     page.should have_content 'Nome: Influenza'
     page.should have_content 'NomePopular: Gripe'
-    page.should have_content 'ESpecialidade: Cardio'
+    page.should have_content 'Especialidade: Cardio'
     page.should have_content 'Item: 1'
 
   end
@@ -28,7 +28,7 @@ feature 'gerenciar patologia' do
         item = FactoryGirl.create(:item,:id => '1')    
         especialidade = FactoryGirl.create(:especialidade,:nome=> 'Cardio')
         patologia = FactoryGirl.create(:patologia, :especialidade => especialidade,:item => item)      
-        visit edit_patologia_path(patologia)
+        visit edit_patologium_path(patologia)
     
     fill_in 'Nome', :with => 'Influenza'
     fill_in 'NomePopular', :with => 'Gripe'
@@ -39,11 +39,11 @@ feature 'gerenciar patologia' do
    
     page.should have_content 'Nome: Influenza'
     page.should have_content 'NomePopular: Gripe'
-    page.should have_content 'ESpecialidade: Cardio'
+    page.should have_content 'Especialidade: Cardio'
     page.should have_content 'Item: 1'
   end
 
- scenario 'excluir edicao' do
+ scenario 'excluir patologia' do
  item = FactoryGirl.create(:item,:id => '1')    
         especialidade = FactoryGirl.create(:especialidade,:nome=> 'Cardio')
         patologia = FactoryGirl.create(:patologia, :especialidade => especialidade,:item => item)       

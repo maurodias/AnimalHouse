@@ -1,4 +1,8 @@
 AnimalHouse::Application.routes.draw do
+  resources :patologias
+
+  resources :patologia
+
   resources :especialidades
 
   resources :tratamentos

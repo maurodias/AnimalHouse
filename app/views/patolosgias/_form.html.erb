@@ -1,0 +1,37 @@
+<%= form_for(@patologia) do |f| %>
+  <% if @patologia.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@patologia.errors.count, "error") %> prohibited this patologia from being saved:</h2>
+
+      <ul>
+      <% @patologia.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :nome %><br />
+    <%= f.text_field :nome %>
+  </div>
+  <div class="field">
+    <%= f.label :nomePopular %><br />
+    <%= f.text_field :nomePopular %>
+  </div>
+  <div class="field">
+    <%= f.label :detalhes %><br />
+    <%= f.text_field :detalhes %>
+  </div>
+  <div class="field">
+    <%= f.label :especialidade %><br />
+    <%= f.text_field :especialidade %>
+  </div>
+  <div class="field">
+    <%= f.label :item %><br />
+    <%= f.text_field :item %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

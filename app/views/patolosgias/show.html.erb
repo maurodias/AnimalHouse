@@ -1,0 +1,30 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Nome:</b>
+  <%= @patologia.nome %>
+</p>
+
+<p>
+  <b>Nomepopular:</b>
+  <%= @patologia.nomePopular %>
+</p>
+
+<p>
+  <b>Detalhes:</b>
+  <%= @patologia.detalhes %>
+</p>
+
+<p>
+  <b>Especialidade:</b>
+  <%= @patologia.especialidade %>
+</p>
+
+<p>
+  <b>Item:</b>
+  <%= @patologia.item %>
+</p>
+
+
+<%= link_to 'Edit', edit_patologia_path(@patologia) %> |
+<%= link_to 'Back', patologias_path %>

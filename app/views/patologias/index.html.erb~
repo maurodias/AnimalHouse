@@ -1,0 +1,31 @@
+<h1>Listing patologias</h1>
+
+<table>
+  <tr>
+    <th>Nomepopular</th>
+    <th>Nome</th>
+    <th>Detalhes</th>
+    <th>Item</th>
+    <th>Especialidade</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @patologias.each do |patologia| %>
+  <tr>
+    <td><%= patologia.nomePopular %></td>
+    <td><%= patologia.nome %></td>
+    <td><%= patologia.detalhes %></td>
+    <td><%= patologia.item.id %></td>
+    <td><%= patologia.especialidade.nome %></td>
+    <td><%= link_to 'Show', patologia %></td>
+    <td><%= link_to 'Edit', edit_patologia_path(patologia) %></td>
+    <td><%= link_to 'Excluir', patologia, confirm: 'Are you sure?', method: :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Patologium', new_patologium_path %>
