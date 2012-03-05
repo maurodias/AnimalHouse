@@ -1,0 +1,20 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Detalhes:</b>
+  <%= @relato.detalhes %>
+</p>
+
+<p>
+  <b>Item:</b>
+  <%= @relato.item.id %>
+</p>
+
+<p>
+  <b>Patologia:</b>
+  <%= @relato.patologia.nome %>
+</p>
+
+
+<%= link_to 'Edit', edit_relato_path(@relato) %> |
+<%= link_to 'Back', relatos_path %>

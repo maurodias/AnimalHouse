@@ -1,0 +1,27 @@
+<h1>Listing relatos</h1>
+
+<table>
+  <tr>
+    <th>Detalhes</th>
+    <th>Item</th>
+    <th>Patologia</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @relatos.each do |relato| %>
+  <tr>
+    <td><%= relato.detalhes %></td>
+    <td><%= relato.item.id %></td>
+    <td><%= relato.patologia.nome %></td>
+    <td><%= link_to 'Show', relato %></td>
+    <td><%= link_to 'Edit', edit_relato_path(relato) %></td>
+    <td><%= link_to 'Excluir', relato, confirm: 'Are you sure?', method: :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Relato', new_relato_path %>
