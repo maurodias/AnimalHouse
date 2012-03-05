@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120305035129) do
+ActiveRecord::Schema.define(:version => 20120305233056) do
 
   create_table "animals", :force => true do |t|
     t.string   "nomeCientifico"
@@ -189,5 +189,17 @@ ActiveRecord::Schema.define(:version => 20120305035129) do
     t.datetime "created_at"
     t.datetime "updated_at"
   end
+
+  create_table "vetxespecialidades", :force => true do |t|
+    t.integer  "itemlink_id"
+    t.integer  "veterinario_id"
+    t.integer  "especialidade_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "vetxespecialidades", ["especialidade_id"], :name => "index_vetxespecialidades_on_especialidade_id"
+  add_index "vetxespecialidades", ["itemlink_id"], :name => "index_vetxespecialidades_on_itemlink_id"
+  add_index "vetxespecialidades", ["veterinario_id"], :name => "index_vetxespecialidades_on_veterinario_id"
 
 end

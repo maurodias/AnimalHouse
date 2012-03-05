@@ -1,0 +1,27 @@
+<h1>Listing vetxespecialidades</h1>
+
+<table>
+  <tr>
+    <th>Itemlink</th>
+    <th>Veterinario</th>
+    <th>Especialidade</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @vetxespecialidades.each do |vetxespecialidade| %>
+  <tr>
+    <td><%= vetxespecialidade.itemlink %></td>
+    <td><%= vetxespecialidade.veterinario %></td>
+    <td><%= vetxespecialidade.especialidade %></td>
+    <td><%= link_to 'Show', vetxespecialidade %></td>
+    <td><%= link_to 'Edit', edit_vetxespecialidade_path(vetxespecialidade) %></td>
+    <td><%= link_to 'Destroy', vetxespecialidade, confirm: 'Are you sure?', method: :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Vetxespecialidade', new_vetxespecialidade_path %>
