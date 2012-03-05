@@ -1,0 +1,15 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Status:</b>
+  <%= @itemlink.status %>
+</p>
+
+<p>
+  <b>Veterinario:</b>
+  <%= @itemlink.veterinario %>
+</p>
+
+
+<%= link_to 'Edit', edit_itemlink_path(@itemlink) %> |
+<%= link_to 'Back', itemlinks_path %>

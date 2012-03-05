@@ -1,4 +1,6 @@
 AnimalHouse::Application.routes.draw do
+  resources :itemlinks
+
   resources :relatos
 
   resources :patologias
