@@ -27,8 +27,8 @@ feature 'gerenciar vetxespecialidade' do
         itemlink = FactoryGirl.create(:itemlink,:id => '1')   
          veterinario = FactoryGirl.create(:veterinario,:nome=> 'Anonymous')
     especialidade = FactoryGirl.create(:especialidade,:nome=> 'ONCOLOGIA')        
-        vetxespecialidade = FactoryGirl.create(:vetxespecialidade, :sintoma => sintoma,:patologia => patologia, :itemlink => itemlink)      
-        visit edit_vetxespecialidade_path(pathoxsintoma)
+        vetxespecialidade = FactoryGirl.create(:vetxespecialidade, :especialidade => especialidade,:patologia => patologia, :itemlink => itemlink)      
+        visit edit_vetxespecialidade_path(vetxespecialidade)
     
     select 'Anonymous', :on => 'Veterinario'
     select 'ONCOLOGIA', :on => 'Especialidade'
@@ -47,7 +47,7 @@ end
     itemlink = FactoryGirl.create(:itemlink,:id => '1')   
     veterinario = FactoryGirl.create(:veterinario,:nome=> 'Anonymous')
     especialidade = FactoryGirl.create(:especialidade,:nome=> 'ONCOLOGIA')        
-    vetxespecialidade = FactoryGirl.create(:vetxespecialidade, :sintoma => sintoma,:patologia => patologia, :itemlink => itemlink)      
+    vetxespecialidade = FactoryGirl.create(:vetxespecialidade, :especialidade => especialida,:patologia => patologia, :itemlink => itemlink)      
 	visit vetxespecialidades_path
 
     click_link 'Excluir'  

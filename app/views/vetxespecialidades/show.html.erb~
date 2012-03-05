@@ -2,17 +2,17 @@
 
 <p>
   <b>Itemlink:</b>
-  <%= @vetxespecialidade.itemlink.id %>
+  <%= @vetxespecialidade.itemlink %>
 </p>
 
 <p>
   <b>Veterinario:</b>
-  <%= @vetxespecialidade.veterinario.nome %>
+  <%= @vetxespecialidade.veterinario %>
 </p>
 
 <p>
   <b>Especialidade:</b>
-  <%= @vetxespecialidade.especialidade.nome %>
+  <%= @vetxespecialidade.especialidade %>
 </p>
 
 

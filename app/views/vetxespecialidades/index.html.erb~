@@ -12,8 +12,8 @@
 
 <% @vetxespecialidades.each do |vetxespecialidade| %>
   <tr>
-    <td><%= vetxespecialidade.itemlink.id %></td>
-    <td><%= vetxespecialidade.veterinario.nome %></td>
+    <td><%= vetxespecialidade.itemlink %></td>
+    <td><%= vetxespecialidade.veterinario.nome.id %></td>
     <td><%= vetxespecialidade.especialidade.nome %></td>
     <td><%= link_to 'Show', vetxespecialidade %></td>
     <td><%= link_to 'Edit', edit_vetxespecialidade_path(vetxespecialidade) %></td>

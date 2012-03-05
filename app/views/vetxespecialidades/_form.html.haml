@@ -1,0 +1,6 @@
+= semantic_form_for(@vetxespecialidade) do |f| 
+  = f.input :veterinario, :member_label => :nome, :label => 'Veterinario'
+  = f.input :especialidade, :member_label => :nome, :label => 'Especialidade'
+  = f.input :itemlink, :member_label => :id, :label => 'Itemlink'
+  = f.submit 'Salvar'
+
