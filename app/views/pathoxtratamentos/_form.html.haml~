@@ -1,0 +1,29 @@
+<%= form_for(@pathoxtratamento) do |f| %>
+  <% if @pathoxtratamento.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@pathoxtratamento.errors.count, "error") %> prohibited this pathoxtratamento from being saved:</h2>
+
+      <ul>
+      <% @pathoxtratamento.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :itemlink %><br />
+    <%= f.text_field :itemlink %>
+  </div>
+  <div class="field">
+    <%= f.label :patologia %><br />
+    <%= f.text_field :patologia %>
+  </div>
+  <div class="field">
+    <%= f.label :tratamento %><br />
+    <%= f.text_field :tratamento %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

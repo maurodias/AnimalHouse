@@ -1,0 +1,59 @@
+require 'spec_helper'
+
+feature 'gerenciar pathoxtratamento' do
+  before :each do
+  end
+  
+  scenario 'incluir pathoxtratamento' do
+
+    itemlink = FactoryGirl.create(:itemlink,:id => '1')   
+    tratamento = FactoryGirl.create(:tratamento,:nome=> 'Gelo')
+    patologia = FactoryGirl.create(:patologia,:nome=> 'Cancer')        
+    visit new_pathoxtratamento_path
+  
+    select 'Cancer', :on => 'Patologia'
+    select 'Gelo', :on => 'Tratamento'
+    select '1', :on => 'Itemlink'
+        
+    click_button 'Salvar'
+   
+    page.should have_content 'Patologia: Cancer'
+    page.should have_content 'Tratamento: Gelo'
+    page.should have_content 'Itemlink: 1'
+
+  end
+
+ scenario 'alterar pathoxtratamento' do
+        itemlink = FactoryGirl.create(:itemlink,:id => '1')   
+        tratamento = FactoryGirl.create(:tratamento,:nome=> 'Gelo')
+        patologia = FactoryGirl.create(:patologia,:nome=> 'Cancer')        
+        pathoxtratamento = FactoryGirl.create(:pathoxtratamento, :tratamento => tratamento,:patologia => patologia, :itemlink => itemlink)      
+        visit edit_pathoxtratamento_path(pathoxtratamento)
+    
+    select 'Cancer', :on => 'Patologia'
+    select 'Gelo', :on => 'Tratamento'
+    select '1', :on => 'Itemlink'
+        
+    click_button 'Salvar'
+   
+    page.should have_content 'Patologia: Cancer'
+    page.should have_content 'Tratamento: Gelo'
+    page.should have_content 'Itemlink: 1'
+
+end
+
+ scenario 'excluir pathoxtratamento' do
+       itemlink = FactoryGirl.create(:itemlink,:id => '1')   
+        tratamento = FactoryGirl.create(:tratamento,:nome=> 'Gelo')
+        patologia = FactoryGirl.create(:patologia,:nome=> 'Cancer')        
+        pathoxtratamento = FactoryGirl.create(:pathoxtratamento, :tratamento => tratamento,:patologia => patologia, :itemlink => itemlink)      
+
+visit edit_pathoxtratamentos_path
+
+    click_link 'Excluir'  
+
+  end
+ 
+end
+
+

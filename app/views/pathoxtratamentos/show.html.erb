@@ -1,0 +1,20 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Itemlink:</b>
+  <%= @pathoxtratamento.itemlink.id %>
+</p>
+
+<p>
+  <b>Patologia:</b>
+  <%= @pathoxtratamento.patologia.nome %>
+</p>
+
+<p>
+  <b>Tratamento:</b>
+  <%= @pathoxtratamento.tratamento.nome %>
+</p>
+
+
+<%= link_to 'Edit', edit_pathoxtratamento_path(@pathoxtratamento) %> |
+<%= link_to 'Back', pathoxtratamentos_path %>

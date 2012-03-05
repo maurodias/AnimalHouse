@@ -1,0 +1,6 @@
+= semantic_form_for(@pathoxtratamento) do |f| 
+  = f.input :patologia, :member_label => :nome, :label => 'Patologia'
+  = f.input :tratamento, :member_label => :nome, :label => 'Tratamento'
+  = f.input :itemlink, :member_label => :id, :label => 'Itemlink'
+  = f.submit 'Salvar'
+

@@ -1,0 +1,27 @@
+<h1>Listing pathoxtratamentos</h1>
+
+<table>
+  <tr>
+    <th>Itemlink</th>
+    <th>Patologia</th>
+    <th>Tratamento</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @pathoxtratamentos.each do |pathoxtratamento| %>
+  <tr>
+    <td><%= pathoxtratamento.itemlink %></td>
+    <td><%= pathoxtratamento.patologia %></td>
+    <td><%= pathoxtratamento.tratamento %></td>
+    <td><%= link_to 'Show', pathoxtratamento %></td>
+    <td><%= link_to 'Edit', edit_pathoxtratamento_path(pathoxtratamento) %></td>
+    <td><%= link_to 'Destroy', pathoxtratamento, confirm: 'Are you sure?', method: :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Pathoxtratamento', new_pathoxtratamento_path %>
