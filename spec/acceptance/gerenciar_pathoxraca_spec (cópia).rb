@@ -7,7 +7,7 @@ feature 'gerenciar pathoxraca' do
   scenario 'incluir pathoxraca' do
 
     itemlink = FactoryGirl.create(:itemlink,:id => '1')   
-    raca = FactoryGirl.create(:raca,:nomePopular=> 'Boxer')
+    raca = FactoryGirl.create(:raca,:nome=> 'Boxer')
     patologia = FactoryGirl.create(:patologia,:nome=> 'Cancer')        
     visit new_pathoxraca_path
   
@@ -25,7 +25,7 @@ feature 'gerenciar pathoxraca' do
 
  scenario 'alterar pathoxraca' do
         itemlink = FactoryGirl.create(:itemlink,:id => '1')   
-        raca = FactoryGirl.create(:raca,:nomePopular=> 'Boxer')
+        raca = FactoryGirl.create(:raca,:nome=> 'Boxer')
         patologia = FactoryGirl.create(:patologia,:nome=> 'Cancer')        
         pathoxraca = FactoryGirl.create(:pathoxraca, :raca => raca,:patologia => patologia, :itemlink => itemlink)      
         visit edit_pathoxraca_path(pathoxraca)
@@ -44,7 +44,7 @@ end
 
  scenario 'excluir pathoxraca' do
         itemlink = FactoryGirl.create(:itemlink,:id => '1')   
-        raca = FactoryGirl.create(:raca,:nomePopular=> 'Boxer')
+        raca = FactoryGirl.create(:raca,:nome=> 'Boxer')
         patologia = FactoryGirl.create(:patologia,:nome=> 'Cancer')        
         pathoxraca = FactoryGirl.create(:pathoxraca, :raca => raca,:patologia => patologia, :itemlink => itemlink)     
 

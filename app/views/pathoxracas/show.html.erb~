@@ -1,0 +1,20 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Itemlink:</b>
+  <%= @pathoxraca.itemlink %>
+</p>
+
+<p>
+  <b>Patologia:</b>
+  <%= @pathoxraca.patologia.nome %>
+</p>
+
+<p>
+  <b>Raca:</b>
+  <%= @pathoxraca.raca.nome %>
+</p>
+
+
+<%= link_to 'Edit', edit_pathoxraca_path(@pathoxraca) %> |
+<%= link_to 'Back', pathoxracas_path %>

@@ -1,4 +1,6 @@
 AnimalHouse::Application.routes.draw do
+  resources :pathoxracas
+
   resources :pathoxtratamentos
 
   resources :pathoxsintomas

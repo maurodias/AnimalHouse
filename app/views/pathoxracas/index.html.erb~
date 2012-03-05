@@ -1,0 +1,27 @@
+<h1>Listing pathoxracas</h1>
+
+<table>
+  <tr>
+    <th>Itemlink</th>
+    <th>Patologia</th>
+    <th>Raca</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @pathoxracas.each do |pathoxraca| %>
+  <tr>
+    <td><%= pathoxraca.itemlink.id %></td>
+    <td><%= pathoxraca.patologia.nome %></td>
+    <td><%= pathoxraca.raca.nome %></td>
+    <td><%= link_to 'Show', pathoxraca %></td>
+    <td><%= link_to 'Edit', edit_pathoxraca_path(pathoxraca) %></td>
+    <td><%= link_to 'Destroy', pathoxraca, confirm: 'Are you sure?', method: :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Pathoxraca', new_pathoxraca_path %>
