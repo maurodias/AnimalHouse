@@ -1,0 +1,6 @@
+= semantic_form_for(@follow) do |f| 
+  = f.input :follower, :member_label => :nome, :label => 'Vet Follower'
+  = f.input :followed, :member_label => :nome, :label => 'Vet Followed'
+  = f.input :status, :label => 'Status'
+  = f.submit 'Salvar'
+

@@ -1,4 +1,6 @@
 AnimalHouse::Application.routes.draw do
+  resources :follows
+
   resources :vetxespecialidades
 
   resources :pathoxracas
